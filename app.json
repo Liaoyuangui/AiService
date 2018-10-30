@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/inputInfo/inputInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0099CC",
+    "navigationBarTitleText": "爱服务企业圈",
+    "navigationBarTextStyle": "#ffffff"
+  }
+}

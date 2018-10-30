@@ -1,0 +1,81 @@
+<view class='top_tab'>
+   <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item active">推荐</view>
+    <view class="flex-item">动态</view>
+    <view class="flex-item">活动</view>
+    <view class="flex-item">案例</view>
+    <view class="flex-item">问答</view>
+  </view>
+</view> 
+<!--首页推荐内容-->
+<view class='content'>
+  <scroll-view>
+  <!--首页推荐内容-->
+    <view class='section dt'>
+     <!--首页推荐内容动态头部信息-->
+      <view class='info flex-wrp' style="flex-direction:row;">
+        <view class="flex-item headPhoto"><image src='' mode='scaleToFill'></image></view>
+         <view class="flex-item dtInfo">
+          <view class='nickName'></view>
+          <view class='baseInfo'><text >11:09 pm</text><text>动态</text></view>
+        </view>
+    </view>
+      <!--首页推荐内容动态信息-->
+    <view class='dt_content'>
+      <view class='dt_content_text'>按时大大大现在出新阿萨德哇所大多哇爱仕达多群多无群奥术大师大大爱仕达多群无无多</view>
+      <view class='dt_content_img'>
+        <view class='info flex-wrp' style="flex-direction:row;">
+          <view class='moreImg'>
+            <image src='../image/1.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/1.jpg'></image>
+          </view>
+          <view class='moreImg'> 
+            <image src='../image/2.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/2.jpg'></image>
+          </view>
+          <view class='moreImg'>
+            <image src='../image/3.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/3.jpg'></image>
+          </view>
+        </view>
+          <view class='info flex-wrp' style="flex-direction:row;">
+            <view class='moreImg'>
+              <image src='../image/4.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/4.jpg'></image>
+            </view>
+            <view class='moreImg'>
+             <image src='../image/5.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/5.jpg'></image>
+            </view>
+            <view class='moreImg'>
+              <image src='../image/6.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/6.jpg'></image>
+            </view>
+          </view>  
+          <view class='info flex-wrp' style="flex-direction:row;">
+            <view class='moreImg'>
+              <image src='../image/7.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/7.jpg'></image>
+            </view>
+            <view class='moreImg'>
+              <image src='../image/8.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/8.jpg'></image>
+            </view>
+            <view class='moreImg'>
+              <image src='../image/9.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/9.jpg'></image>
+            </view>
+          </view>  
+        </view>
+      </view>
+      <!--动态底部工具栏-->
+      <view class='content_function'>
+        <view class='liulan'>999</view>
+        <view class='liuyan'>999</view>
+        <view class='dianzhan'>999</view>
+        <view class='zhuanfa'>999</view> 
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!--底部功能栏-->
+<view class='bottom_tab'>
+   <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">首页</view>
+    <view class="flex-item">服务</view>
+    <view class="flex-item">+</view>
+    <view class="flex-item">消息</view>
+    <view class="flex-item">我的</view>
+  </view>
+</view> 

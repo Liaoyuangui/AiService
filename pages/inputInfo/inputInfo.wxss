@@ -1,0 +1,91 @@
+page{
+  height:100%;
+  background-color: #79CFE6;
+}
+
+.content{
+  height:100%;
+}
+
+.index_bg{
+  height:100%;
+  position: absolute;
+  z-index: -1;
+}
+
+/*标题*/
+.show_title{
+  color:#ffffff;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 40rpx;
+}
+ /*确认信息*/
+ .next_step{
+   position:fixed;
+   bottom:0px;
+   width: 100%;
+   background-color: #0099CC;
+   z-index: 2;
+ }
+
+  .next_step button{
+    background-color: #0099CC;
+    color:#ffffff;
+  }
+
+ 
+  /*显示企业信息*/
+  .show_center{
+    margin-bottom:150rpx; 
+  }
+  .input_info{
+    background-color: #ffffff;
+    border:1px solid #eeeeee;
+    border-radius: 5px;
+    margin: 0rpx 20rpx 0px 20rpx ;
+  }
+  .input_info .flex-wrp{
+    display: flex;
+    margin: 10px 5px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #eeeeee;
+  }
+
+    .input_info .flex-wrp:last-child{
+      border:0px;
+      padding-bottom: 0px;
+    }
+
+  .input_info .cus_title{
+    width: 30%;
+    font-size: 30rpx; 
+    line-height: 58rpx;
+    color:#0099CC;
+  }
+  .input_info .cus_content{
+    width: 70%;
+  }
+  .cus_tax text{
+     width: 20%;
+   }
+
+    .input_info .cus_content input{
+   font-size: 30rpx; 
+  }
+
+  /*背景图*/
+  .index_bg{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;/*垂直居中*/
+    justify-content: center;/*水平居中*/
+    background-color: #79CFE6;
+  }
+
+  /*选择县市*/
+.picker{
+  font-size:30rpx;
+}
