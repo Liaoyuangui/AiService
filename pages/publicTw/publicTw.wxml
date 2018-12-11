@@ -1,0 +1,17 @@
+<!--头部输入问题标题-->
+<view class='inputQuestionTitle'>
+  <input placeholder='请输入想要输入的问题' type='text'></input>
+  <view class='submit' bindtap='jumpQuiz'>下一步</view>
+</view>
+<view class='questionList'>
+  <block>
+    <view class='questionList_text'>
+      <view class='questionList_title'>代理记账安全不安全？</view>
+      <view class='questionList_info'><label>16回答</label><label>10关注</label></view>
+    </view> 
+    <view class='questionList_text'>
+      <view class='questionList_title'>代理记账安全不安全？</view>
+      <view class='questionList_info'><label>16回答</label><label>10关注</label></view>
+    </view> 
+  </block>
+</view>

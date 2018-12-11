@@ -1,0 +1,21 @@
+@import "../index/index.wxss";
+@import "../../app.wxss";
+.myInfo{display: flex;border-top:1px solid #eeeeee;border-bottom: 1px solid #eeeeee; padding:20rpx 60rpx; width: auto;
+}
+.myInfo_photo .image{width: 100rpx;border-radius:50%; }
+.myInfo_text {margin-left: 20px;font-size: 30rpx;}
+.myInfo_text view:last-child{color: #999999;margin-top: 5px;}
+.myInfo:active{background-color:#eeeeee;}
+.myInfo::after{ content:   "\e634";font-size: 25px;position: absolute;right:5px; color: #999999;top:15px;}
+.myInfo_function{display: flex;}
+.myInfo_function .myInfo_function_text{width: 25%; text-align: center;margin-top: 5px;}
+.myInfo_function icon{font-size: 55rpx;color: #FD862F;}
+.myInfo_function .myInfo_function_text text{font-size: 30rpx;}
+
+.my_function{margin-top: 15px;}
+.my_function view{border-top:1px solid #eeeeee;border-bottom: 1px solid #eeeeee;margin-bottom: 10px;padding: 10px;}
+.my_function view text{font-size: 30rpx;position: relative;bottom: 3px;}
+
+.my_function icon{font-size: 55rpx;color: #FD862F;margin-right: 5px;}
+
+

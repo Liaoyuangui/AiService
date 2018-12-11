@@ -1,0 +1,25 @@
+<view class='AlandHd_title' ><label>标题:</label><text bindtap='jumpInputText' data-type='title'>{{title}}</text></view>
+<view class='AlandHd_text'>
+<view class='add'><icon class='iconfont icon-tianjia' bindtap='addFirst'></icon></view>
+  <block wx:for='{{textList}}'>
+    <view class='AlandHd_area'>
+      <view class='AlandHd_btn'><icon class='iconfont icon-guanbi' data-num='{{index}}' bindtap='removeItem'></icon></view>
+      <view class='AlandHd_input'>
+        <view class='AlandHd_inputImg'>
+          <view class='addImage' bindtap='addImage' wx:if='{{!item.imgUrl}}' data-num='{{index}}'>+</view>
+          <image mode="aspectFill" src='{{item.imgUrl}}' wx:else='{{item.imgUrl}}'  bindtap='addImage' data-num='{{index}}'></image>
+        </view>
+        <view class='AlandHd_inputText' bindtap='jumpInputText' data-type='text' data-num='{{index}}'>{{item.text}}</view>
+      </view>
+    </view>
+  </block>
+  <view class='add'><icon class='iconfont icon-tianjia'  bindtap='addLast'></icon></view>
+</view>
+
+ <!--底部功能模块-->
+   <view  class='publish_function'>
+    <view class='publish_function_leftBtn' bindtap='selectImage' ><icon  class='iconfont icon-tupian'></icon></view>
+    <view class='publish_function_leftBtn'><icon  class='iconfont icon-caidan'></icon></view>
+    <view class='publish_function_leftBtn'><icon  class='iconfont icon-lianjie'></icon></view>
+    <view class='publish_function_rightBtn'><view class='publish_button'>发布</view></view>
+  </view>

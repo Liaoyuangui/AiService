@@ -11,71 +11,149 @@
 <view class='content'>
   <scroll-view>
   <!--首页推荐内容-->
-    <view class='section dt'>
+    <view class='section dt' wx:for="{{dtList}}" >
      <!--首页推荐内容动态头部信息-->
-      <view class='info flex-wrp' style="flex-direction:row;">
-        <view class="flex-item headPhoto"><image src='' mode='scaleToFill'></image></view>
+      <view class='info flex-wrp' style="flex-direction:row;" bindtap='jumpDtinfo'>
+        <view class="flex-item headPhoto"><image src='{{item.userImg}}' mode='scaleToFill'></image></view>
          <view class="flex-item dtInfo">
-          <view class='nickName'></view>
-          <view class='baseInfo'><text >11:09 pm</text><text>动态</text></view>
+          <view class='nickName'>{{item.userNickName}}</view>
+          <view class='baseInfo'><text >{{item.userInfoDate}}</text><text>{{item.userInfotype}}</text></view>
         </view>
     </view>
       <!--首页推荐内容动态信息-->
     <view class='dt_content'>
-      <view class='dt_content_text'>按时大大大现在出新阿萨德哇所大多哇爱仕达多群多无群奥术大师大大爱仕达多群无无多</view>
-      <view class='dt_content_img'>
-        <view class='info flex-wrp' style="flex-direction:row;">
-          <view class='moreImg'>
-            <image src='../image/1.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/1.jpg'></image>
-          </view>
-          <view class='moreImg'> 
-            <image src='../image/2.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/2.jpg'></image>
-          </view>
-          <view class='moreImg'>
-            <image src='../image/3.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/3.jpg'></image>
-          </view>
-        </view>
-          <view class='info flex-wrp' style="flex-direction:row;">
-            <view class='moreImg'>
-              <image src='../image/4.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/4.jpg'></image>
-            </view>
-            <view class='moreImg'>
-             <image src='../image/5.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/5.jpg'></image>
-            </view>
-            <view class='moreImg'>
-              <image src='../image/6.jpg' mode='aspectFill' bindtap='showBigPicture' data-src='../image/6.jpg'></image>
-            </view>
-          </view>  
-          <view class='info flex-wrp' style="flex-direction:row;">
-            <view class='moreImg'>
-              <image src='../image/7.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/7.jpg'></image>
-            </view>
-            <view class='moreImg'>
-              <image src='../image/8.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/8.jpg'></image>
-            </view>
-            <view class='moreImg'>
-              <image src='../image/9.jpg' mode='aspectFill' bindtap='showBigPicture'  data-src='../image/9.jpg'></image>
-            </view>
-          </view>  
-        </view>
+      <view class='dt_content_text' bindtap='jumpDtinfo'>{{item.dtText}}</view>
+      <view class='dt_content_img'  >
+        <block wx:for="{{item.dtImage}}" wx:for-index="idx" wx:for-item="Image">
+           <view class='moreImg'>
+             <image src='{{Image.Imageurl}}' mode='aspectFill' bindtap='showBigPicture' data-src='{{Image.Imageurl}}'  data-list='{{item.dtImage}}' ></image>
+            </view> 
+        </block>
       </view>
+     </view>
       <!--动态底部工具栏-->
       <view class='content_function'>
-        <view class='liulan'>999</view>
-        <view class='liuyan'>999</view>
-        <view class='dianzhan'>999</view>
-        <view class='zhuanfa'>999</view> 
+        <view class='liulan' bindtap='jumpDtinfo'><image src='../image/view.png' mode='widthFix'></image><text>999</text></view>
+        <view class='liuyan' bindtap='jumpDtinfo'><image src='../image/comment.png' mode='widthFix'></image><text>999</text></view>
+        <view class='dianzhan' bindtap='jumpDtinfo'><image src='../image/noLove.png' mode='widthFix'></image><text>999</text></view>
+        <view class='zhuanfa'  ><button open-type="share"><image src='../image/share.png' mode='widthFix'></image><text>999</text></button></view> 
       </view>
     </view>
+      <!--首页服务案例内容-->
+    <view class='section fwal' wx:for="{{fwalList}}">
+     <!--首页服务案例动态头部信息-->
+      <view class='info flex-wrp' style="flex-direction:row;">
+        <view class="flex-item headPhoto"><image src='{{item.userImg}}' mode='scaleToFill'></image></view>
+         <view class="flex-item dtInfo">
+          <view class='nickName'>{{item.userNickName}}</view>
+          <view class='baseInfo'><text >{{item.userInfoDate}}</text><text>{{item.userInfotype}}</text></view>
+        </view>
+    </view>
+      <!--首页服务案例动态信息-->
+    <view class='fwal_content'>
+      <view class='fwal_content_title' bindtap='jumpfwalinfo'>{{item.fwalTitle}}</view>
+      <view class='fwal_content_text' bindtap='jumpfwalinfo'>{{item.fwalText}}</view>
+      <view class='dt_content_img'  >
+        <block wx:for="{{item.fwalImage}}" wx:for-index="idx" wx:for-item="Image">
+           <view class='onlyImg' wx:if='{{item.fwalImage.length==1}}'>
+             <image src='{{Image.Imageurl}}' mode='widthFix' bindtap='showBigPicture' data-src='{{Image.Imageurl}}'  data-list='{{item.fwalImage}}'  ></image>
+            </view> 
+            <view class='moreImg' wx:elif='{{item.fwalImage.length>1}}'>
+             <image src='{{Image.Imageurl}}' mode='aspectFill' bindtap='showBigPicture' data-src='{{Image.Imageurl}}'  data-list='{{item.fwalImage}}' ></image>
+            </view> 
+        </block>
+      </view>
+     </view>
+      <!--动态底部工具栏-->
+      <view class='content_function'>
+        <view class='liulan'><image src='../image/view.png' mode='widthFix'></image><text>999</text></view>
+        <view class='liuyan'><image src='../image/comment.png' mode='widthFix'></image><text>999</text></view>
+        <view class='dianzhan'><image src='../image/noLove.png' mode='widthFix'></image><text>999</text></view>
+        <view class='zhuanfa' ><button open-type="share"><image src='../image/share.png' mode='widthFix'></image><text>999</text></button></view> 
+      </view>
+    </view>
+    <!--首页企业问答内容（问题）-->
+    <view class='section qytw' wx:for="{{qywtList}}">
+    <view class='info flex-wrp' style="flex-direction:row;">
+        <view class="flex-item headPhoto"><image src='{{item.userImg}}' mode='scaleToFill'></image></view>
+         <view class="flex-item dtInfo">
+          <view class='nickName'>{{item.userNickName}}</view>
+          <view class='baseInfo'><text >{{item.userInfoDate}}</text><text>{{item.userInfotype}}</text></view>
+        </view>
+      </view>
+      <!--首页企业问答动态信息-->
+    <view class='qytw_content' bindtap='jumpQandA'>
+      <view class='qytw_content_title'><text class='qytw_type'>提问</text>{{item.qytwTitle}}</view>
+      <view class='qytw_info'><text >16关注</text><text >16回答</text></view>
+     </view>
+      
+    </view>
+    <!--首页企业问答动态信息（回答）-->
+    <view class='section  qyhd' wx:for="{{answerList}}" >
+      <!--首页企业问答动态头部信息-->
+      <view class='info flex-wrp' style="flex-direction:row;">
+        <view class="flex-item headPhoto"><image src='{{item.userImg}}' mode='scaleToFill'></image></view>
+         <view class="flex-item dtInfo">
+          <view class='nickName'>{{item.userNickName}}</view>
+          <view class='baseInfo'><text >{{item.userInfoDate}}</text><text>{{item.userInfotype}}</text></view>
+        </view>
+      </view>
+      <view class='answer_content' >
+      <view class='answer_content_title' bindtap='jumpQandA'>{{item.answerTitle}}</view>
+      <view class='answer_content_text' bindtap='jumpQandA'>{{item.answerText}}</view>
+      <view class='answer_content_img'  >
+        <block wx:for="{{item.answerImage}}" wx:for-index="idx" wx:for-item="Image">
+           <view class='onlyImg' wx:if='{{item.answerImage.length==1}}'>
+             <image src='{{Image.Imageurl}}' mode='widthFix' bindtap='showBigPicture' data-src='{{Image.Imageurl}}'  data-list='{{item.answerImage}}'  ></image>
+             
+            </view>
+            <view class='moreImg' wx:elif='{{item.answerImage.length>1}}'>
+             <image src='{{Image.Imageurl}}' mode='aspectFill' bindtap='showBigPicture' data-src='{{Image.Imageurl}}'  data-list='{{item.answerImage}}' ></image>
+            </view> 
+        </block>
+       </view>
+      </view>
+     </view> 
+    <!--动态底部工具栏-->
+      <view class='content_function'>
+        <view class='liulan'><image src='../image/view.png' mode='widthFix'></image><text>999</text></view>
+        <view class='liuyan'><image src='../image/comment.png' mode='widthFix'></image><text>999</text></view>
+        <view class='dianzhan'><image src='../image/noLove.png' mode='widthFix'></image><text>999</text></view>
+        <view class='zhuanfa' ><button open-type="share"><image src='../image/share.png' mode='widthFix'></image><text>999</text></button></view> 
+      </view>
+    <!--结束-->
   </scroll-view>
+</view>
+
+
+<!--发布按钮-->
+<view class='button_publish'>
+  <view class='publishBtn publishBtnDt' animation="{{animationDT}}" bindtap='jumpPublicDt'>动态</view>
+  <view class='publishBtn publishBtnHd' animation="{{animationHd}}"  bindtap='publicAlAndHd'>活动</view>
+  <view class='publishBtn publishBtnAi' animation="{{animationAl}}"  bindtap='publicAlAndHd'>案例</view>
+  <view class='publishBtn publishBtnWd' animation="{{animationWd}}" bindtap='jumpPublicTw'>问答</view>
 </view>
 <!--底部功能栏-->
 <view class='bottom_tab'>
    <view class="flex-wrp" style="flex-direction:row;">
-    <view class="flex-item">首页</view>
-    <view class="flex-item">服务</view>
-    <view class="flex-item">+</view>
-    <view class="flex-item">消息</view>
-    <view class="flex-item">我的</view>
+    <view class=" flex-item active" data-url='../index/index' bindtap='indexSwitchTab' data-num='0'>
+      <view><icon class='iconfont icon-shouye' ></icon></view>
+      <view><text>首页</text></view>
+    </view>
+   <view class="flex-item {{isSelect==1?'active':''}}" data-url='../service/service' bindtap='indexSwitchTab' data-num='1'>
+      <view><icon class='iconfont icon-caidan'></icon></view>
+      <view><text>服务</text></view>
+    </view>
+    <view class="flex-item" ><view class='publish' bindtap='showPublishBtn' data-type='{{publishType}}'>{{publishText}}</view></view>
+   <view class="flex-item {{isSelect==2?'active':''}}" data-url='../message/message' bindtap='indexSwitchTab' data-num='2'>
+     <button open-type="contact"><view><icon class='iconfont icon-duomeitiicon-'></icon></view>
+      <view><text class="message">消息</text></view></button>
+    </view>
+   <view class="flex-item {{isSelect==3?'active':''}}" data-url='../myInfo/myInfo' bindtap='indexSwitchTab' data-num='3'>
+      <view><icon class='iconfont icon-addressbook'></icon></view>
+      <view><text>我的</text></view>
+    </view>
   </view>
 </view> 
+<!--弹出页面底部模板-->
+<view class='reveal-modal-bg {{isShow==false?"hide":""}}'  bindtap='showPublishBtn' data-type='hide'></view>

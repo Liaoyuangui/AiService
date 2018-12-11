@@ -1,12 +1,22 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/inputInfo/inputInfo"
+    "pages/inputInfo/inputInfo",
+    "pages/dynamicInfo/dynamicInfo",
+    "pages/fwal/fwal",
+    "pages/QandA/QandA",
+    "pages/service/service",
+    "pages/publicDt/publicDt",
+    "pages/publicTw/publicTw",
+    "pages/publicAlAndHd/publicAlAndHd",
+    "pages/inputText/inputText",
+    "pages/quiz/quiz",
+    "pages/myInfo/myInfo",
+    "pages/myBaseInfo/myBaseInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0099CC",
-    "navigationBarTitleText": "爱服务企业圈",
-    "navigationBarTextStyle": "#ffffff"
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "爱服务企业圈"
   }
 }

@@ -1,0 +1,28 @@
+<form>
+<view class='publish_content'>
+  <view class='publish_Question_title'>代理记账安全隐患有哪些？</view>
+  <view class='publish_input'>
+      <textarea bindblur="bindTextAreaBlur"  placeholder="需要发布的内容。。。" />
+  </view>
+  <view class='publish_image'>
+      <view class='dt_content_img'  >
+        <block wx:for="{{publishImages}}" wx:for-index="idx" wx:for-item="Image">
+           <view class='moreImg'>
+             <image src='{{Image}}' mode='aspectFill' bindtap='deleteLocalImageList' data-src='{{Image}}'  data-list='{{publishImages}}' data-index="{{idx}}"></image>
+            </view> 
+        </block>
+         <view class='publish_image_add' bindtap='selectImage' wx:if='{{publishImages.length<9}}' 
+          data-imagesLength='{{publishImages.length}}'>+</view>   
+      </view>
+    <view class='clear'></view>
+  </view>
+  <view  class='publish_position'><icon class='iconfont icon-dingwei'></icon><text>{{address}}</text></view>
+</view>  
+  <!--底部功能模块-->
+   <view  class='publish_function'>
+    <view class='publish_function_leftBtn' bindtap='selectImage' ><icon  class='iconfont icon-tupian'></icon></view>
+    <view class='publish_function_leftBtn'><icon  class='iconfont icon-caidan'></icon></view>
+    <view class='publish_function_leftBtn'><icon  class='iconfont icon-lianjie'></icon></view>
+    <view class='publish_function_rightBtn'><view class='publish_button'>发布</view></view>
+  </view>
+</form>

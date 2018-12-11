@@ -1,0 +1,7 @@
+@import "../inputText/inputText.wxss";
+.myBaseInfo{ background-color: #ffffff; border-bottom:1px solid #eeeeee; border-top:1px solid #eeeeee; padding: 0px 10px;}
+.myBaseInfo_text{display: flex;border-bottom:1px solid #eeeeee; }
+.myBaseInfo view:last-child{border-bottom:0px; }
+.myBaseInfo_text label{width: 30%;font-size: 32rpx;}
+.myBaseInfo_text{padding: 10px 0px;}
+.myBaseInfo_text input{font-size: 32rpx;}

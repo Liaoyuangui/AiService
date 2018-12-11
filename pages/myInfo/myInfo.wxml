@@ -1,0 +1,50 @@
+<view class='my' id="my">
+  <view class='myInfo iconfont' bindtap='jumpMyBaseInfo'>
+    <view class='myInfo_photo'><view class='image'><open-data type="userAvatarUrl"></open-data></view></view>
+    <view class='myInfo_text'>
+      <view><open-data type="userNickName" lang="zh_CN"></open-data></view>
+      <view>个人名片</view>
+    </view>
+  </view>
+  <view class='myInfo_function'>
+    <view class='myInfo_function_text'><view><icon class='iconfont icon-fabu1'></icon></view><view><text>我的发布</text></view></view>
+    <view class='myInfo_function_text'><view><icon class='iconfont icon-yuyuezhongxin'></icon></view><view><text>我的预约</text></view></view>
+    <view class='myInfo_function_text'><view><icon class='iconfont icon-shoucang4'></icon></view><view><text>我的收藏</text></view></view>
+    <view class='myInfo_function_text'><view><icon class='iconfont icon-shoucang3'></icon></view><view><text>我的关注</text></view></view>
+  </view>
+  <view class='my_function'>
+    <view><icon class='iconfont icon-shangdian1'></icon><text>服务商入住</text></view>
+    <view><icon class='iconfont icon-yijianfankui01'></icon><text>功能建议</text></view>
+  </view>
+</view>
+<!--发布按钮-->
+<view class='button_publish'>
+  <view class='publishBtn publishBtnDt' animation="{{animationDT}}" bindtap='jumpPublicDt'>动态</view>
+  <view class='publishBtn publishBtnHd' animation="{{animationHd}}"  bindtap='publicAlAndHd'>活动</view>
+  <view class='publishBtn publishBtnAi' animation="{{animationAl}}"  bindtap='publicAlAndHd'>案例</view>
+  <view class='publishBtn publishBtnWd' animation="{{animationWd}}" bindtap='jumpPublicTw'>问答</view>
+</view>
+<!--底部功能栏-->
+<view class='bottom_tab'>
+   <view class="flex-wrp" style="flex-direction:row;">
+    <view class=" flex-item " data-url='../index/index' bindtap='indexSwitchTab' data-num='0'>
+      <view><icon class='iconfont icon-shouyeshouye' ></icon></view>
+      <view><text>首页</text></view>
+    </view>
+   <view class="flex-item {{isSelect==1?'active':''}}" data-url='../service/service' bindtap='indexSwitchTab' data-num='1'>
+      <view><icon class='iconfont icon-grid'></icon></view>
+      <view><text>服务</text></view>
+    </view>
+    <view class="flex-item" ><view class='publish' bindtap='showPublishBtn' data-type='{{publishType}}'>{{publishText}}</view></view>
+   <view class="flex-item {{isSelect==2?'active':''}}" data-url='../message/message' bindtap='indexSwitchTab' data-num='2'>
+     <button open-type="contact"><view><icon class='iconfont icon-duomeitiicon-'></icon></view>
+      <view><text class="message">消息</text></view></button>
+    </view>
+   <view class="flex-item active" data-url='../myInfo/myInfo' bindtap='indexSwitchTab' data-num='3'>
+      <view><icon class='iconfont icon-addressbook_fill'></icon></view>
+      <view><text>我的</text></view>
+    </view>
+  </view>
+</view> 
+<!--弹出页面底部模板-->
+<view class='reveal-modal-bg {{isShow==false?"hide":""}}'></view>

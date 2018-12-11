@@ -1,0 +1,182 @@
+<view class="servicepage">
+  <view class="recommendFY">
+    <view class="guess-titleAll">
+      <view class='guess-titleAll_menu' bindtap='showMenuList'>
+        <icon class='iconfont icon-liebiao' ></icon>
+      </view>
+      <view  class='guess-titleAll_selectInput'>
+          <input class="{{isHide==false?'':'hiden'}}"></input>
+      </view>
+      <view class='guess-titleAll_selectQuery' bindtap='showSelectQuery'>
+        <icon class='iconfont icon-search' ></icon>
+      </view>
+    </view>
+    <view class="hotBooks-lists " >
+     <!--左侧产品类别-->
+        <scroll-view class="fwTypeList {{ismenuHide==false?'':'hiden'}}" scroll-y="true"   >
+          <view class='fwTypeitem active' bindtap=''>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+            <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+            <view class='fwTypeitem'>asda</view>
+          <view class='fwTypeitem'>asda</view>
+        </scroll-view>
+    <!--右侧服务列表-->
+      <scroll-view class='fwList' scroll-y="true" style="width:{{isHide==false?'70%':'100%'}}">
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+          <view class="hotBooks__title" style="color:#333;">服务标题</view>
+          <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <image src=" " class="play-icon"></image>
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="item">
+        <view class="hotBooks-left__image">
+          <image src="" style="border-radius: 15rpx;width: 120rpx;height: 120rpx;"></image>
+        </view>
+        <view class="hotBooks-right">
+        <view class="hotBooks__title" style="color:#333;">服务标题</view>
+        <image src="/image/arrow-right.png" class="play-icon"></image>
+          <view class="detailS">
+            <text>预约数：X</text>
+          </view>
+        </view>
+      </view>
+      <view class="getMore" style="text-align: center;margin: 12rpx auto;font-size: 0.9em;height:180rpx;">
+        <text>向上轻拉获取更多</text>
+      </view>
+      </scroll-view>
+    </view>
+  </view>
+<!--发布按钮-->
+<view class='button_publish'>
+  <view class='publishBtn publishBtnDt' animation="{{animationDT}}" bindtap='jumpPublicDt'>动态</view>
+  <view class='publishBtn publishBtnHd' animation="{{animationHd}}"  bindtap='publicAlAndHd'>活动</view>
+  <view class='publishBtn publishBtnAi' animation="{{animationAl}}"  bindtap='publicAlAndHd'>案例</view>
+  <view class='publishBtn publishBtnWd' animation="{{animationWd}}" bindtap='jumpPublicTw'>问答</view>
+</view>
+<!--底部功能栏-->
+<view class='bottom_tab'>
+   <view class="flex-wrp" style="flex-direction:row;">
+    <view class=" flex-item " data-url='../index/index' bindtap='indexSwitchTab' data-num='0'>
+      <view><icon class='iconfont icon-shouyeshouye' ></icon></view>
+      <view><text>首页</text></view>
+    </view>
+   <view class="flex-item active" data-url='../service/service' bindtap='indexSwitchTab' data-num='1'>
+      <view><icon class='iconfont icon-kuaijiecaidan'></icon></view>
+      <view><text>服务</text></view>
+    </view>
+    <view class="flex-item" ><view class='publish' bindtap='showPublishBtn' data-type='{{publishType}}'>{{publishText}}</view></view>
+   <view class="flex-item {{isSelect==2?'active':''}}" data-url='../message/message' bindtap='indexSwitchTab' data-num='2'>
+     <button open-type="contact"><view><icon class='iconfont icon-duomeitiicon-'></icon></view>
+      <view><text class="message">消息</text></view></button>
+    </view>
+   <view class="flex-item " data-url='../myInfo/myInfo' bindtap='indexSwitchTab' data-num='3'>
+      <view><icon class='iconfont icon-addressbook'></icon></view>
+      <view><text>我的</text></view>
+    </view>
+  </view>
+</view> 
+<!--弹出页面底部模板-->
+<view class='reveal-modal-bg {{isShow==false?"hide":""}}'></view>
+</view>
